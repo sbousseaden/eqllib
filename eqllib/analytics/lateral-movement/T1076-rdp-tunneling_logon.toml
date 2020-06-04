@@ -13,5 +13,5 @@ techniques = ["T1076"]
 
 [analytic]
 query = '''
-security where event_id==4624 and (logon_type==3 or logon_type==10) and (ip_address=="127.0.*" or ip_address=="::1") and target_user_name!="*$"
+security where event_id==4624 and logon_type==10 and (ip_address=="127.0.*" or ip_address=="::1") and target_user_name!="*$"
 '''
